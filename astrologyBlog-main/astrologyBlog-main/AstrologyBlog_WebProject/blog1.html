@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Astrology</title>
+    <link rel="stylesheet" href="blogstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+                <h3>Spaceology</h3>
+            </div>
+
+            <div class="home">
+                <a href="index.html"><i class="ri-arrow-left-s-line"></i></a>
+                <a href="index.html">Home</a>
+            </div>
+        </nav>
+
+        <div class="hero-container">
+            <h1 class="heading-h1">The colorful nebula in the southwestern sky</h1>
+            <div class="profile">
+                <img src="images/author1.png" alt="">
+                <div class="wrapper">
+                    <strong>Joe Rao</strong>
+                    <p class="p-details-small">March 04, 2023</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="blog-section">
+        <div class="container">
+            <img class="nebula" src="https://uploads-ssl.webflow.com/6403b3ada2b653c3b153193a/640493c6bac1360bb48628a4_NEBULA-p-800.jpg" class="nebula" alt="">
+
+            <div class="blog-grid">
+                <div class="content-left">
+                    <p id="para" class="p-details-large">
+                        It’s notoriously difficult to take a picture of a black hole. But when they are surrounded by material we have an opportunity to witness the hole carved out by the event horizon. But what we see in the famous images of black holes isn’t the event horizon
+                        itself, but a magnified and enlarged version known as the shadow.
+                        <br> No light can escape the surface of a black hole, a boundary which is known as the event horizon. Because of that simple fact black holes make for frustratingly difficult astronomical targets. They emit no radiation of their
+                        own (except for the possibility of the exotic quantum process known as Hawking radiation, but that is far too feeble to be meaningful).</p>
+                    <p class="more-text" style="display:none">
+                        <br> Plus, they don’t reflect or refract any surrounding light, so we can only detect them based on their influence on their surroundings. The most common way to do this is to search for accretion discs, which are rings of material
+                        surrounding a black hole consisting of matter flowing into the event horizon. As the matter approaches the black hole, it heats up and glows with intense high energy radiation. We have been able to observe accretion discs around
+                        black holes of all sizes, from stellar mass black holes in our galactic neighborhood to the supermassive black holes.
+
+                        <br> We’ve also been able to observe the gravitational waves emitted when black holes , merge together and watch as stars orbit around central, unseen centers of gravity.
+                        <br> But starting a few years ago the Event Horizon Telescope has been able to provide a new view of black holes by directly imaging the of two supermassive black holes, one in the Virgo galaxy and one in our own. The images show
+                        a ghostly glow surrounding a void of complete nothingness.
+                        <br> That void of complete nothingness is indeed the black hole, but the black hole itself is far smaller than the hole suggests. What we are actually observing in the gap in the images is known as the shadow. The shadow itself
+                        is caused by two things.
+                    </p>
+
+                    <button id="read-more" class="btn">Read More</button>
+                    <button id="read-less" class="btn" style="display:none">Read Less</button>
+
+                    <div class="video">
+                        <iframe width="100%" height="70%" class="embedly-embed" src="https://www.youtube.com/embed/PBbqotbtT1s" title="Zoom into the Bubble Nebula" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+
+                        <a href="index.html"><button class="btn">Back to Home</button></a>
+                    </div>
+                </div>
+
+                <div class="content-right">
+                    <div class="stick-wrapper">
+                        <div class="subscription">
+                            <strong>Subscribe to our newsletter</strong>
+                            <form id="email-form" method="get">
+                                <input type="email" class="email-input" name="name" placeholder="Email address" required="">
+                                <div class="email-btn-wrap">
+                                    <input type="submit" value="" class="email-button ">
+                                    <img src="https://uploads-ssl.webflow.com/6403b3ada2b653c3b153193a/6403b3ada2b6534532531967_Arrow%20(1).svg" alt="">
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="categories">
+                            <div class="title-large">Categories</div>
+                            <a href="#" class="category-link">
+                                <div class="title-small-pink">Astrology</div>
+                            </a>
+
+                            <a href="#" class="category-link">
+                                <div class="title-small-pink">Engineering</div>
+                            </a>
+
+                            <a href="#" class="category-link">
+                                <div class="title-small-pink">Technology</div>
+                            </a>
+
+                            <a href="#" class="category-link">
+                                <div class="title-small-pink">Researches</div>
+                            </a>
+
+                            <a href="#" class="category-link">
+                                <div class="title-small-pink">Space Industries</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+<script>
+    const text = document.getElementById("para");
+    const readMoreBtn = document.getElementById("read-more");
+    const readLessBtn = document.getElementById("read-less");
+
+    readMoreBtn.addEventListener("click", function() {
+        text.style.height = "auto";
+        readMoreBtn.style.display = "none";
+        readLessBtn.style.display = "block";
+    });
+
+    readLessBtn.addEventListener("click", function() {
+        text.style.height = "100px";
+        readMoreBtn.style.display = "block";
+        readLessBtn.style.display = "none";
+    });
+</script>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Astrology Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <script>
+        fetch('data.json').then(response => response.json()).then(data => {
+            var mainpara = document.getElementById('mainpara');
+            var mainheading = document.getElementById('mainheading');
+            var heading1 = document.getElementById('blogheading1');
+            var para1 = document.getElementById('blogpara1');
+            var heading2 = document.getElementById('blogheading2');
+            var para2 = document.getElementById('blogpara2');
+            var heading3 = document.getElementById('blogheading3');
+            var para3 = document.getElementById('blogpara3');
+            var heading4 = document.getElementById('blogheading4');
+            var para4 = document.getElementById('blogpara4');
+            var footer = document.getElementById('footerpara');
+
+            mainpara.innerHTML = data.mainpara;
+            mainheading.innerHTML = data.mainheading;
+            heading1.innerHTML = data.heading1;
+            para1.innerHTML = data.paragraph1;
+            heading2.innerHTML = data.heading2;
+            para2.innerHTML = data.paragraph2;
+            heading3.innerHTML = data.heading3;
+            para3.innerHTML = data.paragraph3;
+            heading4.innerHTML = data.heading4;
+            para4.innerHTML = data.paragraph4;
+            console.log(data);
+        })
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+                <h3>Spaceology</h3>
+            </div>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#content-section">Blog</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-body">
+            <p id="mainpara"></p>
+            <img src="images/logo uet.png" alt="">
+            <h2 id="mainheading"></h2>
+        </div>
+    </header>
+
+    <section id="content-section">
+        <div class="container">
+            <div class="blog-grid">
+                <div class="content-left">
+                    <a href="blog1.html" class="blog-item">
+                        <div class="blog-img">
+                            <img src="https://uploads-ssl.webflow.com/6403b3ada2b653c3b153193a/640493c6bac1360bb48628a4_NEBULA-p-800.jpg" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="heading-blog" id="blogheading1"></h3>
+                            <p class="p-details-medium" id="blogpara1"></p>
+                            <div class="profile">
+                                <img src="images/author1.png" alt="">
+                                <div class="wrapper">
+                                    <strong>Joe Rao</strong>
+                                    <p class="p-details-small">March 04, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="blog.html" class="blog-item">
+                        <div class="blog-img-hole">
+                            <img src="https://uploads-ssl.webflow.com/6403b3ada2b653c3b153193a/64049ac57ad4e006d3ca9018_blackhole.jpg" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="heading-blog" id="blogheading2"></h3>
+                            <p class="p-details-medium" id="blogpara2"></p>
+                            <div class="profile">
+                                <img src="images/author2.png" alt="">
+                                <div class="wrapper">
+                                    <strong>Paul M. Sutter</strong>
+                                    <p class="p-details-small">March 04, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="blog.html" class="blog-item">
+                        <div class="blog-img">
+                            <img src="https://uploads-ssl.webflow.com/6403b3ada2b653c3b153193a/64049e90e2cfd95aa9f470f6_bigobjects.jpg" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="heading-blog" id="blogheading3"></h3>
+                            <p class="p-details-medium" id="blogpara3"></p>
+                            <div class="profile">
+                                <img src="" alt="">
+                                <div class="wrapper">
+                                    <strong>Evan Gough</strong>
+                                    <p class="p-details-small">March 03, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="blog.html" class="blog-item">
+                        <div class="blog-img-hole">
+                            <img src="images/whitePlanet.jpg" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="heading-blog" id="blogheading4"> </h3>
+                            <p class="p-details-medium" id="blogpara4"></p>
+                            <div class="profile">
+                                <img src="https://uploads-ssl.webflow.com/6403b3ada2b653c3b153193a/6404a1fcd39581e18feb929c_download-removebg-preview%20(2).png" alt="">
+                                <div class="wrapper">
+                                    <strong>Arwen Rimmer</strong>
+                                    <p class="p-details-small">March 02, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="content-right">
+                    <div class="stick-wrapper">
+                        <form action="" class="search-form">
+                            <input type="search" class="search-bar" placeholder="Search articles">
+                            <a href="#" class="search-btn-wrapper">
+                                <input type="submit" value="" class="search-button">
+                                <img src="https://uploads-ssl.webflow.com/6403b3ada2b653c3b153193a/6403b3ada2b65302b853195b_Search%20icon.svg" alt="" class="search-icon">
+                            </a>
+                        </form>
+
+                        <div class="subscription">
+                            <strong>Subscribe to our newsletter</strong>
+                            <form id="email-form" method="get">
+                                <input type="email" class="email-input" name="name" placeholder="Email address" required="">
+                                <div class="email-btn-wrap">
+                                    <input type="submit" value="" class="email-button ">
+                                    <img src="https://uploads-ssl.webflow.com/6403b3ada2b653c3b153193a/6403b3ada2b6534532531967_Arrow%20(1).svg" alt="">
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="featured">
+                            <div class="title-large">Featured</div>
+                            <div class="featured-block">
+                                <a href="#" class="featured-item">
+                                    <img src="images/satellite.jpg" width="90" class="feature-img" alt="">
+                                    <div class="title-small">What is used in space exploration?</div>
+                                </a>
+
+                                <a href="#" class="featured-item">
+                                    <img src="https://uploads-ssl.webflow.com/6403b3ada2b653c3b153193a/640620bd6119491dd01e2522_Astronaut-min.jpg" width="90" alt="" class="feature-img">
+                                    <div class="title-small">Expeditions, what it's like to actually be a scientist?</div>
+                                </a>
+
+                                <a href="#" class="featured-item">
+                                    <img src="https://uploads-ssl.webflow.com/6403b3ada2b653c3b153193a/6406213561194939731e2c2b_7_kepler186f.jpg" width="90" alt="" class="feature-img">
+                                    <div class="title-small">Is there life on other planets?</div>
+                                </a>
+
+                                <a href="#" class="featured-item">
+                                    <img src="https://uploads-ssl.webflow.com/6403b3ada2b653c3b153193a/64062231bf04356b828180f9_gallexies.jpg" width="90" alt="" class="feature-img">
+                                    <div class="title-small">Our Milky Way Galaxy: How Big is Space?</div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="categories">
+                            <div class="title-large">Categories</div>
+                            <a href="#" class="category-link">
+                                <div class="title-small-pink">Astrology</div>
+                            </a>
+
+                            <a href="#" class="category-link">
+                                <div class="title-small-pink">Engineering</div>
+                            </a>
+
+                            <a href="#" class="category-link">
+                                <div class="title-small-pink">Technology</div>
+                            </a>
+
+                            <a href="#" class="category-link">
+                                <div class="title-small-pink">Researches</div>
+                            </a>
+
+                            <a href="#" class="category-link">
+                                <div class="title-small-pink">Space Industries</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <p id="footerpara"></p>
+                <strong>ZAINAB TARIQ 20-SE-30</strong><br>
+                <strong>LAIBA IFTIKHAR 20-SE-92</strong>
+            </div>
+
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/"><i class="ri-linkedin-box-fill"></i></a>
+                <a href="https://www.instagram.com/"><i class="ri-instagram-line"></i></a>
+                <a href="https://www.facebook.com/"><i class="ri-facebook-box-fill"></i></a>
+                <a href="https://www.twitter.com/"><i class="ri-twitter-fill"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
